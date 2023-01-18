@@ -35,7 +35,9 @@ export default class Stack {
     }
 
     // return true if the stack is empyt
-    isEmpyt() {}
+    isEmpyt() {
+        return this.count === 0
+    }
 
     // remove all elements from the stack
     clear() {}
