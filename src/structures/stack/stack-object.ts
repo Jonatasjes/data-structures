@@ -30,7 +30,9 @@ export default class Stack {
     }
 
     // return element from the top of the stack
-    peek() {}
+    peek() {
+        return this.items[this.count-1]
+    }
 
     // return true if the stack is empyt
     isEmpyt() {}
