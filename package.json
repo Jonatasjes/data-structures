@@ -1,0 +1,19 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "1 - stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonatasjes/data-structures.git"
+  },
+  "author": "Jonatas Eleoterio Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonatasjes/data-structures/issues"
+  },
+  "homepage": "https://github.com/Jonatasjes/data-structures#readme"
+}
