@@ -51,7 +51,9 @@ export default class Queue {
     }
 
     // This method return true if there's no element on the queue.
-    isEmpty() {}
+    isEmpty() {
+        return this.count === 0
+    }
 
     // This method return the queue total of elements
     size(){}
