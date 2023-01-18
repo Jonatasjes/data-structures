@@ -19,7 +19,10 @@ export default class Queue {
     }
 
     // This method add a new element on the end of the queue.
-    enqueue(element) {}
+    enqueue(element: any) {
+        this.items[this.count] = element
+        this.count++
+    }
 
     // This method remove the queue first element. Also return the removed element.  
     dequeue() {}
