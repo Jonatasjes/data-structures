@@ -1,7 +1,7 @@
 {
   "name": "data-structures",
   "version": "1.0.0",
-  "description": "1 - stack",
+  "description": "Creating some data structures to study",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jonatasjes/data-structures/issues"
   },
-  "homepage": "https://github.com/Jonatasjes/data-structures#readme"
+  "homepage": "https://github.com/Jonatasjes/data-structures#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
 }
