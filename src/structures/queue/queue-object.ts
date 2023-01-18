@@ -27,7 +27,7 @@ export default class Queue {
     // This method remove the queue first element. Also return the removed element.  
     dequeue() {
 
-        if(this.count === 0) return undefined
+        if(this.isEmpty()) return undefined
 
         const removedElement = this.items[this.lowestCount]
         delete this.items[this.lowestCount]
