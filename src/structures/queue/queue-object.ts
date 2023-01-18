@@ -46,7 +46,9 @@ export default class Queue {
 
     // This method return the queue first element. It is the first element added and the first
     // will be returned. 
-    peek() {}
+    peek() {
+        return this.items[this.lowestCount]
+    }
 
     // This method return true if there's no element on the queue.
     isEmpty() {}
