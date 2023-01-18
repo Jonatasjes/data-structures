@@ -46,5 +46,7 @@ export default class Stack {
     }
 
     // return the total of elements in the stack
-    size() {}
+    size() {
+        return this.count
+    }
 }
