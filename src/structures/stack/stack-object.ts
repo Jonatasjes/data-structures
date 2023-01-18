@@ -23,6 +23,7 @@ export default class Stack {
 
     // remove element from the top of the stack
     pop() {
+        if (this.isEmpyt()) return undefined
         const deletedItem = this.items[this.count]
         this.count--
         delete this.items[this.count]
