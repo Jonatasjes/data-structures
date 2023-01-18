@@ -50,4 +50,15 @@ export default class Stack {
     size() {
         return this.count
     }
+
+    toString() {
+        if(this.isEmpyt()) return ''
+
+        let objString = `${this.items[0]}`
+        for(let i = 1; i < this.count; i++) {
+            objString = `${objString}, ${this.items[i]}`
+        }
+
+        return objString
+    }
 }
