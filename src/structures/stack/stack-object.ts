@@ -22,7 +22,12 @@ export default class Stack {
     }
 
     // remove element from the top of the stack
-    pop() {}
+    pop() {
+        const deletedItem = this.items[this.count]
+        this.count--
+        delete this.items[this.count]
+        return deletedItem
+    }
 
     // return element from the top of the stack
     peek() {}
