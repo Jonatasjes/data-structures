@@ -40,7 +40,10 @@ export default class Stack {
     }
 
     // remove all elements from the stack
-    clear() {}
+    clear() {
+        this.items = {}
+        this.count = 0
+    }
 
     // return the total of elements in the stack
     size() {}
