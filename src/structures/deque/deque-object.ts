@@ -20,7 +20,10 @@ export default class Deque {
     addFront(element: any) {}
 
     // This method add a new element in the end of the queue. 
-    addBack(element: any) {}
+    addBack(element: any) {
+        this.items[this.count] = element
+        this.count++
+    }
 
     // This method remove the queue front element.
     removeFront() {}
