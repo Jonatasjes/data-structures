@@ -48,7 +48,9 @@ export default class Deque {
     removeBack() {}
 
     // This method return the queue front element.
-    peekFront() {}
+    peekFront() {
+        return this.items[this.lowestCount]
+    }
 
     // This method return the queue last element.
     peekBack() {}
