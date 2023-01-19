@@ -26,7 +26,23 @@ export default class Deque {
     }
 
     // This method remove the queue front element.
-    removeFront() {}
+    removeFront() {
+        if(this.isEmpty()) return undefined
+
+        const removedElement = this.items[this.lowestCount]
+        delete this.items[this.lowestCount]
+        
+        if (this.count === 1) {
+            this.lowestCount = 0
+            this.count = 0
+            return removedElement
+        }
+
+        this.lowestCount++
+        this.count--
+
+        return removedElement
+    }
 
     // This method remove the queue last element.
     removeBack() {}
