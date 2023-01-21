@@ -8,11 +8,13 @@
 export default class Deque {
     private count: number
     private lowestCount: number
+    private higherCount: number
     private items: any
 
     constructor() {
         this.count = 0
         this.lowestCount = 0
+        this.higherCount = 0
         this.items = {}
     }
 
@@ -21,7 +23,14 @@ export default class Deque {
 
     // This method add a new element in the end of the queue. 
     addBack(element: any) {
-        this.items[this.count] = element
+        if (this.isEmpty()) {
+            this.items[this.higherCount] = element
+            this.count++
+            return    
+        }
+
+        this.higherCount++
+        this.items[this.higherCount] = element 
         this.count++
     }
 
@@ -33,6 +42,7 @@ export default class Deque {
         delete this.items[this.lowestCount]
         
         if (this.count === 1) {
+            this.higherCount = 0
             this.lowestCount = 0
             this.count = 0
             return removedElement
