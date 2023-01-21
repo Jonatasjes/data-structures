@@ -23,7 +23,7 @@ export default class Stack {
 
     // remove element from the top of the stack
     pop() {
-        if (this.isEmpyt()) return undefined
+        if (this.isEmpty()) return undefined
         const deletedItem = this.items[this.count]
         this.count--
         delete this.items[this.count]
@@ -36,7 +36,7 @@ export default class Stack {
     }
 
     // return true if the stack is empyt
-    isEmpyt() {
+    isEmpty() {
         return this.count === 0
     }
 
@@ -52,7 +52,7 @@ export default class Stack {
     }
 
     toString() {
-        if(this.isEmpyt()) return ''
+        if(this.isEmpty()) return ''
 
         let objString = `${this.items[0]}`
         for(let i = 1; i < this.count; i++) {
