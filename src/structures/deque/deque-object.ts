@@ -63,7 +63,10 @@ export default class Deque {
     }
 
     // This method return the queue last element.
-    peekBack() {}
+    peekBack() {
+        if(this.isEmpty()) return undefined
+        return this.items[this.higherCount]
+    }
 
     // This method return true if there's no element on the queue.
     isEmpty() {
