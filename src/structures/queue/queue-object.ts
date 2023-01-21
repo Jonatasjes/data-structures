@@ -20,10 +20,6 @@ export default class Queue {
         this.items = {}
     }
 
-    getCount() {
-        return this.count
-    }
-
     getLowestCount() {
         return this.lowestCount
     }
@@ -82,5 +78,18 @@ export default class Queue {
     }
 
     // This method return the queue total of elements
-    size(){}
+    size(){
+        return this.count
+    }
+
+    toString() {
+        if(this.isEmpty()) return ''
+
+        let objString = `${this.items[0]}`
+        for(let i = 1; i < this.count; i++) {
+            objString = `${objString}, ${this.items[i]}`
+        }
+
+        return objString
+    }
 }
