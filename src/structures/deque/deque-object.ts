@@ -18,6 +18,22 @@ export default class Deque {
         this.items = {}
     }
 
+    getCount() {
+        return this.count
+    }
+
+    getLowestCount() {
+        return this.lowestCount
+    }
+
+    getHigherCount() {
+        return this.higherCount
+    }
+
+    getItems() {
+        return JSON.stringify(this.items).replace('{','').replace('}','') 
+    }
+
     // This method add a new element in front of the queue.
     addFront(element: any) {}
 
