@@ -10,17 +10,42 @@
 export default class Queue {
     private count: number
     private lowestCount: number
+    private higherCount: number
     private items: any
 
     constructor() {
         this.count = 0
         this.lowestCount = 0
+        this.higherCount = 0
         this.items = {}
+    }
+
+    getCount() {
+        return this.count
+    }
+
+    getLowestCount() {
+        return this.lowestCount
+    }
+
+    getHigherCount() {
+        return this.higherCount
+    }
+
+    getItems() {
+        return this.items
     }
 
     // This method add a new element on the end of the queue.
     enqueue(element: any) {
-        this.items[this.count] = element
+        if (this.isEmpty()) {
+            this.items[this.higherCount] = element
+            this.count++
+            return    
+        }
+
+        this.higherCount++
+        this.items[this.higherCount] = element 
         this.count++
     }
 
@@ -34,6 +59,7 @@ export default class Queue {
         
         if (this.count === 1) {
             this.lowestCount = 0
+            this.higherCount = 0
             this.count = 0
             return removedElement
         }
